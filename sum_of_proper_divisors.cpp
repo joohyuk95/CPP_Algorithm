@@ -1,7 +1,6 @@
 // 진약수의 합 (진약수 : 자기 자신을 제외한 양의 약수)
 
 #include <iostream>
-
 using namespace std;
 
 int main() 
@@ -23,5 +22,5 @@ int main()
     }
     cout << " = " << sum << endl;
 
-    return 0;    
+    return 0;
 }
