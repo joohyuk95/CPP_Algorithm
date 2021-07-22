@@ -1,6 +1,7 @@
 // 1부터 N까지 각 자연수 약수의 개수 출력
 
 #include <iostream>
+
 using namespace std;
 
 int main()
