@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    int n, cnt, add;
+    int n, cnt;
     cin >> n;
     int *inv = new int[n];
     int *origin = new int[n]();
@@ -15,14 +15,15 @@ int main()
 
     for (int i = 0; i < n; ++i) {
         cnt = 0;
-        add = 0;
-        for (int j = i-1; j >= 0; --j) {
-            if (inv[i] >= inv[j])
+        for (int j = 0; j < n; ++j) {
+            if (origin[j] == 0) {
                 ++cnt;
+                if (cnt == inv[i] + 1) {
+                    origin[j] = i + 1;
+                    break;
+                }
+            }
         }
-        while (origin[inv[i] + cnt + add] != 0)
-            ++add;
-        origin[inv[i] + cnt + add] = i + 1;
     }
     for (int i = 0; i < n; ++i)
         cout << origin[i] << ' ';
