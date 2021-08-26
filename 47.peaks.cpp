@@ -24,5 +24,8 @@ int main()
         }
     }
     cout << cnt << endl;
+    for (int i = 0; i < n+2; ++i)
+        delete[] x[i];
+    delete[] x;
     return 0;
 }
