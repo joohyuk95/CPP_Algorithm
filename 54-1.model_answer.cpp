@@ -14,7 +14,7 @@ int main()
                 cout << "NO";
                 return 0;
             }
-            s.pop();
+            s.pop(); // 짝 없애기
         }
     }
     if (s.empty()) cout << "YES";
