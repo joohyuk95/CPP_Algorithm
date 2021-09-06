@@ -4,10 +4,8 @@ using namespace std;
 
 void decimal_to_bynary(int x)
 {
-    if (x == 0) {
-        cout << endl;
-        return;
-    } else {
+    if (x == 0) return;
+    else {
         decimal_to_bynary(x / 2);
         cout << x % 2;
     }
@@ -18,5 +16,6 @@ int main()
     int n;
     cin >> n;
     decimal_to_bynary(n);
+    cout << endl;
     return 0;
 }
