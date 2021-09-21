@@ -22,8 +22,8 @@ int main()
                 cout << pq.top() << endl;
                 pq.pop();
             }
-        }
-        pq.push(a);
+        } 
+        else pq.push(a);
     }
     return 0;
 }
