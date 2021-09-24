@@ -8,7 +8,7 @@ int dp[21][21];
 
 int C(int n, int r)
 {
-    if (dp[n][r] > 0) return dp[n][r];
+    if (dp[n][r] > 0) return dp[n][r];  // 값이 할당되어 있으면 계산하지 않고, 이미 할당된 값을 바로 반환
     if (n == r || r == 0) return 1;  // nCn or nC0
     else return dp[n][r] = C(n-1, r) + C(n-1, r-1); // 파스칼 삼각형 점화식 nCr = n-1Cr + n-1Cr-1, 값을 저장하면서 동시에 반환
 }
