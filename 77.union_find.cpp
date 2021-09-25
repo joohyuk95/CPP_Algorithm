@@ -26,7 +26,6 @@ int main()
     data.open("./77_data.txt");
     int n, m, a, b, fa, fb;
     data >> n >> m;
-    cout << n << ' ' << m << endl;
     for (int i = 1; i <= n; ++i) {
         set[i] = i;
     }
