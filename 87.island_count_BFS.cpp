@@ -20,7 +20,7 @@ int main()
             if (map[i][j] == 1) {
                 Q.push(make_pair(i, j));
                 map[i][j] = 0;
-                while (!Q.empty()) { // 섬이 아니라 모두 이어져 있다면 상위 for문이 없어도, 이 while문에서 모두 구해짐
+                while (!Q.empty()) {
                     int x = Q.front().first, y = Q.front().second;
                     Q.pop();
                     for (int k = 0; k < 8; ++k) {
