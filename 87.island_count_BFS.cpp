@@ -1,4 +1,5 @@
 // 격자판 정보가 주어지면 섬의 개수를 출력. (1은 섬, 0은 바다)
+// 섬은 1이 상하좌우, 대각선으로 연결되어 있다.
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -18,9 +19,9 @@ int main()
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= n; ++j) {
             if (map[i][j] == 1) {
-                Q.push(make_pair(i, j));
+                Q.push(make_pair(i, j)); // 발견된 섬의 일부분
                 map[i][j] = 0;
-                while (!Q.empty()) {
+                while (!Q.empty()) { // 발견된 섬의 일부분으로부터 연결된 모든 지형을 탐색
                     int x = Q.front().first, y = Q.front().second;
                     Q.pop();
                     for (int k = 0; k < 8; ++k) {
@@ -31,7 +32,7 @@ int main()
                         }
                     }
                 }
-                cnt++;
+                cnt++; // 섬 한 개 탐색 완료
             }
         }
     }
